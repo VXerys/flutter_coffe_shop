@@ -23,12 +23,18 @@ class _SplashPageState extends State<SplashPage> {
     );
   }
 
+  /// A widget that displays a splash page card with a logo, title,
+  /// subtitle, and a button to navigate to the home page.
   Widget _splashPageCard(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        // Display the logo image
         Image.asset('lib/images/logo-coffe.png', width: 200),
+
         SizedBox(height: 40),
+
+        // Display the main title
         Text(
           "Brew Day",
           style: TextStyle(
@@ -37,7 +43,10 @@ class _SplashPageState extends State<SplashPage> {
             fontWeight: FontWeight.bold,
           ),
         ),
+
         SizedBox(height: 15),
+
+        // Display the subtitle
         Text(
           "How do you like your coffee?",
           style: TextStyle(
@@ -46,7 +55,10 @@ class _SplashPageState extends State<SplashPage> {
             fontWeight: FontWeight.bold,
           ),
         ),
+
         SizedBox(height: 30),
+
+        // Display the button to enter the shop
         SizedBox(
           width: double.infinity,
           child: Padding(
@@ -64,9 +76,7 @@ class _SplashPageState extends State<SplashPage> {
               onPressed:
                   () => Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(
-                      builder: (context) => HomePage(), // const HomePage(),
-                    ),
+                    MaterialPageRoute(builder: (context) => HomePage()),
                   ),
               child: const Text(
                 'Enter Shop',
