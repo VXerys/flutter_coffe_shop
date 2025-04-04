@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_coffe_shop/models/coffee.shop.dart';
-import 'package:flutter_coffe_shop/pages/home_page.dart';
+import 'package:flutter_coffe_shop/pages/splash_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       builder:
           (context, child) => const MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: HomePage(),
+            home: SplashPage(),
           ),
     );
   }
